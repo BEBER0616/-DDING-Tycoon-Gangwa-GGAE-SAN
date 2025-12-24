@@ -1,0 +1,117 @@
+python
+
+gangwa = int(input("몇강을 하고 싶으신가요? "))  # 강화 받기
+
+low = 0     # 하급 라이프스톤
+medium = 0  # 중급 라이프스톤
+high = 0    # 상급 라이프스톤
+gold = 0    # 필요 골드
+luby = 0    # 필요 루비
+per = 0     # 강화 확률
+
+if gangwa == 1:
+    low = 1
+    gold = 5000
+    per = 100
+
+elif 2 <= gangwa <= 3:
+    low = 2
+    if gangwa == 2:
+        gold = 25000
+        per = 100
+    else:
+        gold = 50000
+        per = 80
+
+elif 4 <= gangwa <= 5:
+    low = 3
+    medium = 1
+    if gangwa == 4:
+        gold = 100000
+        per = 80
+    else:
+        gold = 130000
+        per = 70
+
+elif 6 <= gangwa <= 7:
+    low = 4
+    medium = 2
+    high = 1
+    luby = 5
+    if gangwa == 6:
+        gold = 150000
+        per = 50
+    else:
+        gold = 170000
+        per = 40
+
+elif 8 <= gangwa <= 9:
+    low = 6
+    medium = 3
+    high = 2
+    luby = 5
+    if gangwa == 8:
+        gold = 300000
+        per = 30
+    else:
+        gold = 350000
+        per = 20
+
+elif 10 <= gangwa <= 12:
+    low = 8
+    medium = 4
+    high = 3
+    luby = 10
+    if gangwa == 10:
+        gold = 500000
+        per = 10
+    elif gangwa == 11:
+        gold = 700000
+        per = 5
+    else:
+        gold = 1000000
+        per = 3
+
+elif 13 <= gangwa <= 14:
+    low = 10
+    medium = 6
+    high = 4
+    luby = 30
+    if gangwa == 13:
+        gold = 1300000
+        per = 2
+    else:
+        gold = 1500000
+        per = 1
+
+elif gangwa == 15:
+    low = 10
+    medium = 6
+    high = 5
+    gold = 2000000
+    per = 1
+    luby = 30
+
+else:
+    print("정수값 1과 15 사이의 값을 입력하시오.")
+    exit()
+
+
+if 1 <= gangwa <= 15:
+
+    print(f"""
+강화에 필요한 재료 및 재화는
+하급 라이프스톤 : {low}개
+중급 라이프스톤 : {medium}개
+상급 라이프스톤 : {high}개
+골드 : {gold}원
+루비 : {luby}개
+강화확률 : {per}%
+""")
+
+else:
+    pass
+
+
+
+
